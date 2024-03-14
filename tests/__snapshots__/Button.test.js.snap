@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 18,
+        "height": "auto",
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginHorizontal": 20,
+        "marginTop": 10,
+        "padding": 3,
+        "width": 340,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FF1361",
+          "borderColor": "#000",
+          "borderRadius": 10,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 10,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="card-button-undefined"
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#25292e",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
