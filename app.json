@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Eurovision Bingo",
-    "slug": "eurovisionbingo",
+    "slug": "eurovision_bingo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,14 +16,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.eurobingo.client"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.aagb1884.eurovisionbingo"
+      "package": "com.aagb1884.eurovision_bingo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -36,9 +37,8 @@
         "origin": false
       },
       "eas": {
-        "projectId": "53ef5fdb-edfd-4a36-bc86-665dcfd76a72"
+        "projectId": "dbf9ddb5-3341-4566-ac43-3fec7b349524"
       }
-    },
-    "owner": "aagb1884"
+    }
   }
 }

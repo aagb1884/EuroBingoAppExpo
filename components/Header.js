@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -22,7 +22,7 @@ export default function CustomHeader() {
       <TouchableOpacity style={{ marginLeft: 20 }} onPress={handleMenuPress}>
         <Ionicons name="menu" size={24} color="#fff" />
       </TouchableOpacity>
-      <Text style={{ color: '#fff', textAlign: 'center', fontSize: 18, fontWeight: 'bold', textShadowColor: 'black', textShadowRadius: 5 }}>
+      <Text style={styles.headerText}>
         EUROVISION BINGO
       </Text>
       {showMenu && (
@@ -47,3 +47,14 @@ export default function CustomHeader() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  headerText: {
+    flex: 1,
+    color: '#fff', 
+    textAlign: 'center', 
+    fontSize: 18, fontWeight: 'bold', 
+    textShadowColor: 'black', 
+    textShadowRadius: 5 
+  }
+})
