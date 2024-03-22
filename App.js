@@ -143,6 +143,7 @@ export default function App() {
   const handleGetNewCards = () => {
     setCardArray(getCliches(EurovisionClicheArray, 6));
     setButtonStates(Array(6).fill(false));
+    setIsBingoButtonActive(false);
      }
 
 
@@ -164,7 +165,11 @@ export default function App() {
                          
           <View style={styles.mainButtonContainer}>
                  
-          <GetCards theme="get-cards" label="get-cards" onPress={handleGetNewCards} />
+          <GetCards 
+          theme="get-cards" 
+          label="get-cards" 
+          onPress={handleGetNewCards}
+           />
           
           <ActiveButtons 
           handleClick={handleClick}
@@ -172,6 +177,7 @@ export default function App() {
           setIsBingoButtonActive={setIsBingoButtonActive}
           buttonStates={buttonStates}
           />
+
           <Winning theme="winning" label="BINGO"
           isBingoButtonActive={isBingoButtonActive}
           setShowGif={setShowGif} 
