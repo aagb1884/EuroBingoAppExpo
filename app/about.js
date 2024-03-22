@@ -24,19 +24,24 @@ export default function About () {
                 <View style={styles.about}>
                     <Text style={styles.textContent}>
                 <Text style={themeTextStyle}>This began as a React JS app hosted on Surge, written in a week before the 2023 Eurovision.</Text>
-                <Text style={themeTextStyle}>I have added a few features since the initial version, but the gameplay remains essentially the same.{"\n"}</Text> 
+                <Text style={themeTextStyle}>{" "}I have added a few features since the initial version, but the gameplay remains essentially the same.{"\n"}</Text> 
                 <Text style={[themeTextStyle, styles.textContent2]}>
                 {"\n"}New features include:
                 {"\n"}
-                       * Bingo button disabled until all six buttons are pressed.
+                • Bingo button disabled until all six buttons are pressed.
                 {"\n"}
-                        * Ticker tape fanfare on winning.
+                • Ticker tape fanfare on winning.
                 {"\n"}
-                       * New Eurovision clichés added.
+                • New Eurovision clichés added.
                 {"\n"}
                 </Text> 
+                <Text style={[themeTextStyle, styles.textContent3]}>
+                {"\n"}
+                Audio Credit:</Text>
+                <Text style={[themeTextStyle, styles.textContent]}>
+                {"\n"}AHHHH by random_intruder -- https://freesound.org/s/392172/ -- License: Creative Commons 0
                 </Text>
-                
+                          </Text>      
                 </View>
                 
                 <View style={styles.links}>
@@ -52,11 +57,10 @@ export default function About () {
                     </Text>
                     </View>
                     <View style={styles.link2}>
-                    <Text style={[themeTextStyle, styles.textContent2]}>Web browser version can be found </Text>
                     <Text
                         style={{color: 'skyblue', textAlign: 'center', fontSize: 18}}
                         onPress={() => Linking.openURL('https://andrewblair.co.uk/apps/eurovision-bingo')}>
-                        here.
+                        Original Web Browser Version.
                     </Text>
                     </View>
                     <View style={styles.link3}>
@@ -102,12 +106,17 @@ export default function About () {
        textContent: {
         fontSize: 18,
         lineHeight: 30,
-        
+        textAlign: 'center',
        },
        textContent2: {
         fontSize: 18,
         lineHeight: 25,
         textAlign: 'center'
+       },
+       textContent3: {
+        fontSize: 18,
+        lineHeight: 30,
+        fontWeight: 'bold',
        },
       links: {
         flex: 1,

@@ -27,7 +27,7 @@ export default function Instructions() {
           {"\n"}
           The aim is to click all six.
           {"\n"}
-          When you have got all six, make sure the sound is on on your device and click the now active 'Bingo' button.
+          When you have got all six, the Bingo button will appear. Press it to receive your fanfare.
           {"\n"}
           Play as many times as you want.
           {"\n"}

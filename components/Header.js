@@ -12,49 +12,78 @@ export default function CustomHeader() {
   };
 
   return (
-    <View style={{ backgroundColor: '#231557', height: 100, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <View style={styles.headerContainer}>
       <LinearGradient
         colors={['#231557', '#44107a', '#ff1361', '#fff800']}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
         style={{ position: 'absolute', width: '100%', height: '100%' }}
       />
-      <TouchableOpacity style={{ marginLeft: 20 }} onPress={handleMenuPress}>
-        <Ionicons name="menu" size={24} color="#fff" />
-      </TouchableOpacity>
-      <Text style={styles.headerText}>
+       <Text style={styles.headerText}>
         EUROVISION BINGO
       </Text>
+      <View style={styles.menuContainer}>
+        <TouchableOpacity  onPress={handleMenuPress}>
+          <Ionicons name="menu" size={30} color="#fff" />
+        </TouchableOpacity>
+      
       {showMenu && (
-        <View style={{ flexDirection: 'column', alignItems: 'left', justifyContent: 'flex-start', marginLeft: 20, width: 100 }}>
+        <View style={styles.menu}>
           <Link href="/">
-            <Text style={{ color: '#fff', fontWeight: 'bold', textShadowColor: 'black', textShadowRadius: 3, marginBottom: 5 }}>
-              * Home
+            <Text style={styles.menuText}>
+              • Home{"    "}{"\n"}
             </Text>
           </Link>
           <Link href="/about">
-            <Text style={{ color: '#fff', fontWeight: 'bold', textShadowColor: 'black', textShadowRadius: 3, marginBottom: 5 }}>
-              * About
+          <Text style={styles.menuText}>
+          • About{"    "}{"\n"}
             </Text>
           </Link>
           <Link href="/instructions">
-            <Text style={{ color: '#fff', fontWeight: 'bold', textShadowColor: 'black', textShadowRadius: 3, marginBottom: 5 }}>
-              * How to Play
+          <Text style={styles.menuText}>
+          • How to Play{"    "}{"\n"}
             </Text>
           </Link>
         </View>
-      )}
+       )}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  headerContainer: { 
+    backgroundColor: '#231557', 
+    height: 100, 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    justifyContent: 'space-between' 
+  },
   headerText: {
     flex: 1,
     color: '#fff', 
     textAlign: 'center', 
-    fontSize: 18, fontWeight: 'bold', 
+    fontSize: 25, 
+    fontWeight: 'bold', 
     textShadowColor: 'black', 
-    textShadowRadius: 5 
-  }
+    textShadowRadius: 5,
+    marginTop: 5, 
+  },
+  menuContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  menu: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-around',
+    justifyItems: 'stretch', 
+   },
+   menuText: { 
+    color: '#fff', 
+    fontWeight: 'bold', 
+    textShadowColor: 'black',
+    textShadowRadius: 3, 
+    marginLeft: 10,
+   }
 })
