@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000',
     padding: 10,
-    margin: 5,
     backgroundColor: '#231557', 
   },
    activeText: {

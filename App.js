@@ -1,4 +1,4 @@
-import { StyleSheet, View, useColorScheme, ImageBackground } from 'react-native';
+import { StyleSheet, View, useColorScheme, ImageBackground, ScrollView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ActiveButtons from './components/ActiveButtons';
 import Winning from './components/Winning';
@@ -153,7 +153,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       
-      <View style={[styles.mainContainer, themeContainerStyle]}>
+      <ScrollView style={[styles.mainContainer, themeContainerStyle]}>
           
             <Header />
           
@@ -187,7 +187,7 @@ export default function App() {
         
         </View>
 
-      </View>
+      </ScrollView>
       
     </SafeAreaProvider>
   );
