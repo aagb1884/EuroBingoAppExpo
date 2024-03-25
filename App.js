@@ -1,4 +1,4 @@
-import { StyleSheet, View, useColorScheme, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, View, useColorScheme, ImageBackground, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ActiveButtons from './components/ActiveButtons';
 import Winning from './components/Winning';
@@ -154,7 +154,7 @@ export default function App() {
     <SafeAreaProvider>
       
       <ScrollView style={[styles.mainContainer, themeContainerStyle]}>
-          
+    <StatusBar barStyle={'dark-content'}/>
             <Header />
           
         <View style={styles.container}>

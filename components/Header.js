@@ -12,7 +12,9 @@ export default function CustomHeader() {
   };
 
   return (
+
     <View style={styles.headerContainer}>
+      
       <LinearGradient
         colors={['#231557', '#44107a', '#ff1361', '#fff800']}
         start={{ x: 0, y: 0.5 }}
@@ -48,6 +50,7 @@ export default function CustomHeader() {
        )}
       </View>
     </View>
+
   );
 }
 

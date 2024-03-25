@@ -21,17 +21,17 @@ export default function Instructions() {
         </Text>
             
         <Text style={[styles.instructions, themeTextStyle]}>
-          Every time you click 'Get New Card' or refresh the Home page, you get six new Eurovision cliches.
+        • Every time you click 'Get New Card' or refresh the Home page, you get six new Eurovision cliches.
           {"\n"}
-          Every time you see or hear one of your cliches on screen during Eurovision, click it.
+          • Every time you see or hear one of your cliches on screen during Eurovision, click it.
           {"\n"}
-          The aim is to click all six.
+          • The aim is to click all six.
           {"\n"}
-          When you have got all six, the Bingo button will appear. Press it to receive your fanfare.
+          • When you have got all six, the Bingo button will appear. Press it to receive your fanfare.
           {"\n"}
-          Play as many times as you want.
+          • Play as many times as you want.
           {"\n"}
-          You can play with any year's Eurovision show.
+          • You can play with any year's Eurovision show.
         </Text>
       </View>
     </View>
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   instructions: {
     fontSize: 18,
     lineHeight: 40,
+    padding: 20
   },
   lightContainer: {
     backgroundColor: "white"
