@@ -17,7 +17,12 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "io.eurobingo.client"
+      "bundleIdentifier": "io.eurobingo.client",
+      "ios":{
+        "infoPlist": {
+            "NSMicrophoneUsageDescription": "The app may ask to use your microphone. It does not need to use your microphone to work."
+        }
+     }
     },
     "android": {
       "adaptiveIcon": {
