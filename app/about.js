@@ -6,7 +6,7 @@ export default function About () {
   
     const colorScheme = useColorScheme();
 
-    const themeTextStyle = colorScheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
+    
     const themeContainerStyle =
     colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
 
@@ -17,15 +17,15 @@ export default function About () {
 
             <View style={styles.content}>
 
-                <Text style={[styles.title, themeTextStyle]}>
+                <Text style={[styles.title, themeContainerStyle]}>
                 About Eurovision Bingo
                 </Text>
 
                 <View style={styles.about}>
-                    <Text style={styles.textContent}>
-                <Text style={themeTextStyle}>This began as a React JS app hosted on Surge, written in a week before the 2023 Eurovision.</Text>
-                <Text style={themeTextStyle}>{" "}I have added a few features since the initial version, but the gameplay remains essentially the same.{"\n"}</Text> 
-                <Text style={[themeTextStyle, styles.textContent2]}>
+                    
+                <Text style={[styles.textContent, themeContainerStyle]}>
+                This began as a React JS app hosted on Surge, written in a week before the 2023 Eurovision.
+                {" "}I have added a few features since the initial version, but the gameplay remains essentially the same.{"\n"}
                 {"\n"}New features include:
                 {"\n"}
                 • Bingo button disabled until all six buttons are pressed.
@@ -34,24 +34,14 @@ export default function About () {
                 {"\n"}
                 • New Eurovision clichés added.
                 {"\n"}
-                </Text> 
-                <Text style={[themeTextStyle, styles.textContent3]}>
-                {"\n"}
-                Audio Credit:</Text>
-                <Text style={[themeTextStyle, styles.textContent]}>
-                {"\n"}AHHHH by random_intruder -- https://freesound.org/s/392172/ -- License: Creative Commons 0
-                </Text>
-                          </Text>      
+                </Text>       
                 </View>
                 
                 <View style={styles.links}>
-                <Text style={[styles.title, themeTextStyle]}>
-                
-                </Text>
-                    <View style={styles.link1}>
-                    <Text style={[themeTextStyle, styles.textContent2]}>Created by </Text>
+                   <View style={styles.link1}>
+                    <Text style={[styles.textContent2, themeContainerStyle]}>Created by </Text>
                     <Text
-                        style={{color: 'skyblue', textAlign: 'center', fontSize: 18}}
+                        style={{color: 'skyblue', fontSize: 18}}
                         onPress={() => Linking.openURL('https://andrewblair.co.uk/')}>
                         Andrew Blair.
                     </Text>
@@ -64,7 +54,7 @@ export default function About () {
                     </Text>
                     </View>
                     <View style={styles.link3}>
-                    <Text style={[themeTextStyle, styles.textContent2]}>If you have enjoyed this app please consider making a donation to </Text>
+                    <Text style={[styles.textContent2, themeContainerStyle]}>If you have enjoyed this app please consider making a donation to </Text>
                     <Text
                         style={{color: 'skyblue', textAlign: 'center', fontSize: 18}}
                         onPress={() => Linking.openURL('https://msf.org.uk/secure/donate/102424')}>
@@ -72,7 +62,15 @@ export default function About () {
                     </Text>
                     
                     </View>
-                    
+                    <View>
+    <Text style={[styles.textContent3, styles.linkText, themeContainerStyle]}>{"\n"}Audio Credit:</Text>
+  <Text 
+  
+    style={[styles.textContent, themeContainerStyle]} 
+    onPress={() => Linking.openURL('https://freesound.org/s/392172/')}>
+    AHHHH by random_intruder</Text>
+    <Text style={[themeContainerStyle, styles.textContent]}>License: Creative Commons 0</Text>
+  </View>
                     
                 </View>
                 </View>
@@ -101,7 +99,7 @@ export default function About () {
       },
       about: {
         flex: 1,
-    
+        
        },
        textContent: {
         fontSize: 18,
@@ -137,16 +135,13 @@ export default function About () {
         textAlign: 'center'
       },
       lightContainer: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        color: "black"
       },
       darkContainer: {
         backgroundColor: 'black',
+        color: 'white'
       },
-      lightThemeText: {
-        color: 'black',
-      },
-      darkThemeText: {
-        color: 'white',
-      },
+      
 
 })

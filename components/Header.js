@@ -14,22 +14,22 @@ export default function CustomHeader() {
   return (
 
     <View style={styles.headerContainer}>
-      
       <LinearGradient
         colors={['#231557', '#44107a', '#ff1361', '#fff800']}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
         style={{ position: 'absolute', width: '100%', height: '100%' }}
       />
-       <Text style={styles.headerText}>
+     <View style={styles.headerContent}>
+      <Text style={styles.headerText}>
         EUROVISION BINGO
       </Text>
-      <View style={styles.menuContainer}>
-        <TouchableOpacity  onPress={handleMenuPress}>
-          <Ionicons name="menu" size={30} color="#fff" />
+    
+        <TouchableOpacity style={styles.menuButton} onPress={handleMenuPress}>
+          <Ionicons name="menu" size={35} color="#fff" />
         </TouchableOpacity>
-      
-      {showMenu && (
+      </View>  
+        {showMenu && (
         <View style={styles.menu}>
           <Link href="/">
             <Text style={styles.menuText}>
@@ -49,7 +49,7 @@ export default function CustomHeader() {
         </View>
        )}
       </View>
-    </View>
+    
 
   );
 }
@@ -60,7 +60,14 @@ const styles = StyleSheet.create({
     height: 100, 
     flexDirection: 'column', 
     alignItems: 'center', 
-    justifyContent: 'space-between' 
+    justifyContent: 'flex-start',
+    
+  },
+  headerContent: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: '1%'
   },
   headerText: {
     flex: 1,
@@ -70,17 +77,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     textShadowColor: 'black', 
     textShadowRadius: 5,
-    marginTop: 5, 
+   },
+  menuButton: {
+    position: 'absolute',
+    top: '50%',
+    transform: [{ translateY: -15 }],
   },
-  menuContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  },
+
   menu: { 
     flexDirection: 'row', 
     justifyContent: 'space-around',
     justifyItems: 'stretch', 
+    marginTop: -20
    },
    menuText: { 
     color: '#fff', 

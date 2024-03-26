@@ -13,6 +13,7 @@ export default function App() {
   const [isBingoButtonActive, setIsBingoButtonActive] = useState(false);
   const colorScheme = useColorScheme();
   const [buttonStates, setButtonStates] = useState([false, false, false, false, false, false]);
+ 
 
   const handleClick = (index) => {
        const updatedButtonStates = [...buttonStates];
@@ -108,7 +109,6 @@ export default function App() {
       "ooh you'll have someone's eye out with that",
       "saxophone",
       'goth in the matrix',
-      'dance track about being possessed by the spirit of Edgar Allen Poe',
       "we're not so different, you and i",
       'surprise eye of sauron',
       'song with faintly threatening aura',
@@ -127,8 +127,12 @@ export default function App() {
       "water feature",
       "floor screaming",
       "i am reminded of the nineties and thus my own mortality",
-      'hot pants',
       'regional variation on yodelling',
+      'thrusting',
+      "a country that didn't exist when you were five",
+      'pandering to the thirsty',
+      'cheese',
+      'the public vote is nothing like the jury vote'
 
   ]
 
@@ -174,7 +178,6 @@ export default function App() {
           <ActiveButtons 
           handleClick={handleClick}
           cardArray={cardArray} 
-          setIsBingoButtonActive={setIsBingoButtonActive}
           buttonStates={buttonStates}
           />
 

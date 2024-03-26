@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Animated, TouchableOpacity, Text, StyleSheet, Switch } from 'react-native';
+import { View, Animated, TouchableOpacity, Text, StyleSheet, Switch, useColorScheme } from 'react-native';
 import { Easing } from 'react-native-reanimated';
 import { Audio } from 'expo-av';
 
@@ -8,6 +8,10 @@ export default function BingoButton({ isBingoButtonActive, setShowGif }) {
   const [sound, setSound] = useState();
   const [choirSound, setChoirSound] = useState();
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const colorScheme = useColorScheme();
+
+  const toggleContainerStyle =
+  colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
 
   useEffect(() => {
     if (isBingoButtonActive) {
@@ -99,11 +103,12 @@ export default function BingoButton({ isBingoButtonActive, setShowGif }) {
           <Text style={styles.activeText}>BINGO</Text>
         </TouchableOpacity>
       </Animated.View>
-      <View style={styles.soundToggleContainer}>
-        <Text style={styles.soundToggleText}>Sound On/Off:</Text>
+      <View style={[styles.soundToggleContainer, toggleContainerStyle]}>
+        <Text style={[styles.soundToggleText, toggleContainerStyle]}>Sound On/Off:</Text>
         <Switch
           value={soundEnabled}
           onValueChange={toggleSound}
+         
         />
       </View>
     </View>
@@ -136,13 +141,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  lightContainer: {
+    backgroundColor: "white",
+    color: 'black'
+  },
+  darkContainer: {
+    backgroundColor: 'black',
+    color: 'white'
+  },
   soundToggleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 10,
+    transform: [{ scaleX: 1.2 }, { scaleY: 1.2 }]
   },
   soundToggleText: {
     marginRight: 10,
-    color: 'grey'
+    
   },
 });
