@@ -19,7 +19,11 @@
       "supportsTablet": true,
       "bundleIdentifier": "io.eurobingo.client",
        "infoPlist": {
-            "NSMicrophoneUsageDescription": "The app may ask to use your microphone. It does not need to use your microphone to work."
+            "NSMicrophoneUsageDescription": "The app does not ask for or need to use your microphone to work.",
+            "NSPrivacyAccessedAPICategoryDiskSpace": "The app does not use any of the APIs listed in the Apple Developer documentation.",
+            "NSPrivacyAccessedAPICategoryFileTimestamp": "The app does not use any of the APIs listed in the Apple Developer documentation.",
+            "NSPrivacyAccessedAPICategorySystemBootTime": "The app does not use any of the APIs listed in the Apple Developer documentation.",
+            "NSPrivacyAccessedAPICategoryUserDefaults": "The app does not use any of the APIs listed in the Apple Developer documentation."
         }
     },
     "android": {
