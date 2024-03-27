@@ -21,13 +21,17 @@ export default function Instructions() {
         </Text>
             
         <Text style={[styles.instructions, themeTextStyle]}>
-        • Every time you click 'Get New Card' or refresh the Home page, you get six new Eurovision cliches.
+        • Every time you click 'Get New Card' or refresh the Home page, you get six new Eurovision clichés.
           {"\n"}
-          • Every time you see or hear one of your cliches on screen during Eurovision, click it.
+          • Every time you see or hear one of your clichés on screen during Eurovision, click it. 
+          {"\n"}
+          • Unclicked buttons are pink. Clicked buttons are purple.
           {"\n"}
           • The aim is to click all six.
           {"\n"}
           • When you have got all six, the Bingo button will appear. Press it to receive your fanfare.
+          {"\n"}
+          • The bingo card will then reset, giving you six new unclicked buttons.
           {"\n"}
           • Play as many times as you want.
           {"\n"}
