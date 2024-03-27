@@ -3,7 +3,7 @@ import { View, Animated, TouchableOpacity, Text, StyleSheet, Switch, useColorSch
 import { Easing } from 'react-native-reanimated';
 import { Audio } from 'expo-av';
 
-export default function BingoButton({ isBingoButtonActive, setShowGif }) {
+export default function BingoButton({ isBingoButtonActive, setShowGif, handleGetNewCards }) {
   const [fadeIn] = useState(new Animated.Value(0));
   const [sound, setSound] = useState();
   const [choirSound, setChoirSound] = useState();
@@ -42,7 +42,9 @@ export default function BingoButton({ isBingoButtonActive, setShowGif }) {
     setShowGif(true);
     setTimeout(() => {
       setShowGif(false);
+      handleGetNewCards();
     }, 7300);
+    
 
     if (soundEnabled) {
     console.log('Loading Sound');
@@ -53,8 +55,10 @@ export default function BingoButton({ isBingoButtonActive, setShowGif }) {
     await sound.playAsync();
     
     setTimeout(() => {
+      handleGetNewCards();
           }, 7300);
     }
+    
   };
 
   useEffect(() => {

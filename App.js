@@ -184,6 +184,7 @@ export default function App() {
           <Winning theme="winning" label="BINGO"
           isBingoButtonActive={isBingoButtonActive}
           setShowGif={setShowGif} 
+          handleGetNewCards={handleGetNewCards}
           />       
           
           </View>
