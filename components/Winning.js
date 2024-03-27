@@ -51,8 +51,8 @@ export default function BingoButton({ isBingoButtonActive, setShowGif, handleGet
     const { sound } = await Audio.Sound.createAsync( require('../assets/euphoria_excerpt.mp3')
     );
     setSound(sound);
-
-    await sound.playAsync();
+     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true});
+     await sound.playAsync();
     
     setTimeout(() => {
       handleGetNewCards();
@@ -75,10 +75,10 @@ export default function BingoButton({ isBingoButtonActive, setShowGif, handleGet
     if (soundEnabled) {
     console.log('Loading Choir Sound');
     const { sound: choirSound } = await Audio.Sound.createAsync( require('../assets/392172__random_intruder__ahhhh.wav'),
-    { volume: 0.05 }
+    { volume: 0.1 }
     );
     setChoirSound(choirSound);
-
+    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true});
     await choirSound.playAsync();
     setTimeout(() => {
     }, 4000);
