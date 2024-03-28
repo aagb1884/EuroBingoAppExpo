@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, useColorScheme, Linking } from 'react-native';
+import { View, Text, StyleSheet, useColorScheme, Linking, ScrollView } from 'react-native';
 import Header from '../components/Header';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -12,7 +12,7 @@ export default function About () {
 
     return (
         <SafeAreaProvider>
-        <View style={[styles.aboutContainer, themeContainerStyle]}>
+        <ScrollView style={[styles.aboutContainer, themeContainerStyle]}>
         <Header />   
 
             <View style={styles.content}>
@@ -63,18 +63,19 @@ export default function About () {
                     
                     </View>
                     <View>
-    <Text style={[styles.textContent3, styles.linkText, themeContainerStyle]}>{"\n"}Audio Credit:</Text>
-  <Text 
-  
-    style={[styles.textContent, themeContainerStyle]} 
-    onPress={() => Linking.openURL('https://freesound.org/s/392172/')}>
-    AHHHH by random_intruder</Text>
-    <Text style={[themeContainerStyle, styles.textContent]}>License: Creative Commons 0</Text>
-  </View>
-                    
+                    <Text style={[styles.textContent3, styles.linkText, themeContainerStyle]}>
+                      {"\n"}Audio Credit:</Text>
+                  <Text 
+                  
+                    style={{color: 'skyblue', textAlign: 'center', fontSize: 18}} 
+                    onPress={() => Linking.openURL('https://freesound.org/s/392172/')}>
+                    AHHHH by random_intruder</Text>
+                    <Text style={[themeContainerStyle, styles.textContent]}>License: Creative Commons 0</Text>
+                  </View>
+                                    
                 </View>
                 </View>
-            </View>
+            </ScrollView>
         
         </SafeAreaProvider>
     );
@@ -91,6 +92,7 @@ export default function About () {
         zIndex: 0,
         justifyContent: 'center', 
         alignItems: 'center',
+        padding: 20
       },
       title: {
         fontSize: 24, 

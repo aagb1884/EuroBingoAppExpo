@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet, useColorScheme, ScrollView } from 'react-native';
 import Header from '../components/Header';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -13,7 +13,7 @@ export default function Instructions() {
 
   return (
     <SafeAreaProvider>
-    <View style={[styles.instructionContainer, themeContainerStyle]}>
+    <ScrollView style={[styles.instructionContainer, themeContainerStyle]}>
       <Header />
       <View style={styles.content}>
         <Text style={[styles.title, themeTextStyle]}>
@@ -38,7 +38,7 @@ export default function Instructions() {
           • You can play with any year's Eurovision show.
         </Text>
       </View>
-    </View>
+    </ScrollView>
     </SafeAreaProvider>
   );
 }
