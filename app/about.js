@@ -12,13 +12,14 @@ export default function About () {
 
     return (
         <SafeAreaProvider>
+          <Header /> 
         <ScrollView style={[styles.aboutContainer, themeContainerStyle]}>
-        <Header />   
+          
 
             <View style={styles.content}>
 
                 <Text style={[styles.title, themeContainerStyle]}>
-                About Eurovision Bingo
+                About
                 </Text>
 
                 <View style={styles.about}>
@@ -64,13 +65,20 @@ export default function About () {
                     </View>
                     <View>
                     <Text style={[styles.textContent3, styles.linkText, themeContainerStyle]}>
-                      {"\n"}Audio Credit:</Text>
+                      {"\n"}Audio Credits:</Text>
                   <Text 
                   
                     style={{color: 'skyblue', textAlign: 'center', fontSize: 18}} 
                     onPress={() => Linking.openURL('https://freesound.org/s/392172/')}>
                     AHHHH by random_intruder</Text>
                     <Text style={[themeContainerStyle, styles.textContent]}>License: Creative Commons 0</Text>
+    
+                    <Text style={[themeContainerStyle, styles.textContent]}>{"\n"}Excerpt from 'Euphoria' by Loreen used under Fair Use principle for non-commercial app.</Text>
+                    <Text 
+                  
+                  style={{color: 'skyblue', textAlign: 'center', fontSize: 18}} 
+                  onPress={() => Linking.openURL('https://loreenofficial.com/')}>
+                  Visit her website.</Text>
                   </View>
                                     
                 </View>
@@ -97,7 +105,7 @@ export default function About () {
       title: {
         fontSize: 24, 
         fontWeight: 'bold', 
-        margin: 10,
+        marginBottom: 10,
       },
       about: {
         flex: 1,

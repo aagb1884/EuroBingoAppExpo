@@ -36,9 +36,9 @@ export default function CustomHeader() {
               • Home{"    "}{"\n"}
             </Text>
           </Link>
-          <Link href="/about">
-          <Text style={styles.menuText}>
-          • About{"    "}{"\n"}
+          <Link href="/play">
+            <Text style={styles.menuText}>
+              • Play{"    "}{"\n"}
             </Text>
           </Link>
           <Link href="/instructions">
@@ -46,6 +46,12 @@ export default function CustomHeader() {
           • How to Play{"    "}{"\n"}
             </Text>
           </Link>
+          <Link href="/about">
+          <Text style={styles.menuText}>
+          • About{"    "}{"\n"}
+            </Text>
+          </Link>
+         
         </View>
        )}
       </View>

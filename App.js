@@ -1,4 +1,4 @@
-import { StyleSheet, View, useColorScheme, ImageBackground, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, useColorScheme, ImageBackground, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ActiveButtons from './components/ActiveButtons';
 import Winning from './components/Winning';
@@ -156,17 +156,19 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      
+       <Header />
       <ScrollView style={[styles.mainContainer, themeContainerStyle]}>
     <StatusBar barStyle={'dark-content'}/>
-            <Header />
+           
           
         <View style={styles.container}>
        
           {showGif && (
            <ImageBackground source={tickerTapeGif} resizeMode="cover" style={styles.background}></ImageBackground>
                 )}
-                         
+            <Text style={[styles.title, themeContainerStyle]}>
+            Play
+            </Text>      
           <View style={styles.mainButtonContainer}>
                  
           <GetCards 
@@ -221,6 +223,11 @@ const styles = StyleSheet.create({
     zIndex: 1,
     flexDirection: 'column',
   },
+  title: {
+    fontSize: 24, 
+    fontWeight: 'bold', 
+    marginBottom: 10,
+  },
   mainButtonContainer: {
     flexDirection: 'column',
     alignItems: 'center',
@@ -234,10 +241,12 @@ const styles = StyleSheet.create({
      textShadowRadius: 5,
   },
   lightContainer: {
-    backgroundColor: "white"
+    backgroundColor: "white",
+    color: "black"
   },
   darkContainer: {
     backgroundColor: 'black',
+    color: 'white'
   },
    getCardsButton: {
     backgroundColor: '#007AFF',

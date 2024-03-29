@@ -13,11 +13,12 @@ export default function Instructions() {
 
   return (
     <SafeAreaProvider>
-    <ScrollView style={[styles.instructionContainer, themeContainerStyle]}>
       <Header />
+    <ScrollView style={[styles.instructionContainer, themeContainerStyle]}>
+      
       <View style={styles.content}>
         <Text style={[styles.title, themeTextStyle]}>
-          How Does This Work Then?
+          How To Play
         </Text>
             
         <Text style={[styles.instructions, themeTextStyle]}>
@@ -30,6 +31,8 @@ export default function Instructions() {
           • The aim is to click all six.
           {"\n"}
           • When you have got all six, the Bingo button will appear. Press it to receive your fanfare.
+          {"\n"}
+          • NB. There will be noises at this point. You can either mute your phone or use the Sound On/Off toggle at the bottom of the Play Screen to remove this.
           {"\n"}
           • The bingo card will then reset, giving you six new unclicked buttons.
           {"\n"}
@@ -53,18 +56,18 @@ const styles = StyleSheet.create({
     marginTop: 20,
     zIndex: 0,
     justifyContent: 'center', 
-    alignItems: 'center',
+    padding: 20
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
-    
-  },
+    textAlign: 'center'
+    },
   instructions: {
     fontSize: 18,
     lineHeight: 40,
-    padding: 20
+    
   },
   lightContainer: {
     backgroundColor: "white"
