@@ -8,8 +8,8 @@ export default function BingoButton({ isBingoButtonActive, setShowGif, handleGet
   const [fadeIn] = useState(new Animated.Value(0));
   const [sound, setSound] = useState();
   const [choirSound, setChoirSound] = useState();
-  const [soundEnabled, setSoundEnabled] = useState(true);
- 
+  const [soundEnabled, setSoundEnabled] = useState(true); 
+  
   useEffect(() => {
     if (isBingoButtonActive) {
         Animated.timing(

@@ -21,13 +21,12 @@ export default function CustomHeader() {
         style={{ position: 'absolute', width: '100%', height: '100%' }}
       />
      <View style={styles.headerContent}>
+     <TouchableOpacity style={styles.menuButton} onPress={handleMenuPress}>
+          <Ionicons name="menu" size={40} color="#fff" />
+        </TouchableOpacity>
       <Text style={styles.headerText}>
         EUROVISION BINGO
-      </Text>
-    
-        <TouchableOpacity style={styles.menuButton} onPress={handleMenuPress}>
-          <Ionicons name="menu" size={35} color="#fff" />
-        </TouchableOpacity>
+      </Text>      
       </View>  
         {showMenu && (
         <View style={styles.menu}>
@@ -63,44 +62,45 @@ export default function CustomHeader() {
 const styles = StyleSheet.create({
   headerContainer: { 
     backgroundColor: '#231557', 
-    height: 100, 
     flexDirection: 'column', 
     alignItems: 'center', 
     justifyContent: 'flex-start',
     
   },
   headerContent: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    marginTop: '1%'
+    justifyContent: 'center',
+    alignContent: 'space-between',
+    margin: '5%'
   },
   headerText: {
-    flex: 1,
+    justifyContent: 'center',
     color: '#fff', 
     textAlign: 'center', 
-    fontSize: 25, 
+    fontSize: 30, 
     fontWeight: 'bold', 
     textShadowColor: 'black', 
     textShadowRadius: 5,
+    paddingLeft: '5%',
    },
   menuButton: {
-    position: 'absolute',
-    top: '50%',
-    transform: [{ translateY: -15 }],
+  
   },
 
   menu: { 
-    flexDirection: 'row', 
+    flexDirection: 'column', 
     justifyContent: 'space-around',
     justifyItems: 'stretch', 
-    marginTop: -20
+    
    },
    menuText: { 
     color: '#fff', 
+    fontSize: 20,
     fontWeight: 'bold', 
     textShadowColor: 'black',
     textShadowRadius: 3, 
     marginLeft: 10,
+    backgroundColor: 'rgba(255, 240, 3, 0.2)'
    }
 })

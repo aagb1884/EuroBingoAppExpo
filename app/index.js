@@ -59,8 +59,10 @@ const styles = StyleSheet.create({
     
   },
   contentContainer: {
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: 'stretch',
+    alignContent: 'center',
+    justifyContent: 'center',
+    margin: 10,
   },
   title: {
     fontSize: 30, 
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     padding: 10,
     backgroundColor: '#44107a',
-    margin: 10,
+    marginTop: 10,
   },
   instructionsButton: {
     borderRadius: 10,
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     padding: 10,
     backgroundColor: '#ff1361',
-    margin: 10,
+    marginTop: 10,
   },
   aboutButton: {
     borderRadius: 10,
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     padding: 10,
     backgroundColor: '#FF892F',
-    margin: 10,
+    marginTop: 10,
   },
   lightContainer: {
     backgroundColor: "white",
