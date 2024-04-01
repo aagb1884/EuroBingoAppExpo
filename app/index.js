@@ -26,6 +26,8 @@ export default function Index () {
           <Text style={[styles.mainText, themeContainerStyle]}>
             You are given six random Eurovision clichés.
             {"\n"}
+            </Text>
+            <Text style={[styles.mainText, themeContainerStyle]}>
             First one to witness all six gets a tiny serotonin boost.
             {"\n"}
           </Text>
