@@ -30,21 +30,27 @@ export default function Index () {
             {"\n"}
           </Text>
           <View style={styles.buttonsContainer}>
+            <View style={styles.homePageButton}>
             <Link href="/play">
               <Pressable onPress={() => handlePress('/play')} style={styles.playButton}>
                 <Text style={styles.buttonLabel}>Play!</Text>
               </Pressable>
             </Link>
+            </View>
+            <View style={styles.homePageButton}>
             <Link href="/instructions">
               <Pressable onPress={() => handlePress('/instructions')} style={styles.instructionsButton}>
                 <Text style={styles.buttonLabel}>How to Play!</Text>
               </Pressable>
             </Link>
+            </View>
+            <View style={styles.homePageButton}>
             <Link href="/about">
               <Pressable onPress={() => handlePress('/about')} style={styles.aboutButton}>
                 <Text style={styles.buttonLabel}>About!</Text>
               </Pressable>
             </Link>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -78,18 +84,21 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flex: 1,
-   alignItems: 'center',
-    justifyContent: 'space-between',
+    alignItems: 'center',
+    // justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: 10
+    marginTop: 20
   },
   buttonLabel: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
     textShadowColor: 'black', 
     textShadowRadius: 5,
+  },
+  homePageButton: {
+    margin: 10
   },
   playButton: {
     borderRadius: 10,
@@ -99,9 +108,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#000',
-    padding: 10,
+    padding: 20,
     backgroundColor: '#44107a',
-    marginTop: 10,
   },
   instructionsButton: {
     borderRadius: 10,
@@ -111,9 +119,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#000',
-    padding: 10,
+    padding: 20,
     backgroundColor: '#ff1361',
-    marginTop: 10,
   },
   aboutButton: {
     borderRadius: 10,
@@ -123,9 +130,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#000',
-    padding: 10,
+    padding: 20,
     backgroundColor: '#FF892F',
-    marginTop: 10,
   },
   lightContainer: {
     backgroundColor: "white",

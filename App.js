@@ -132,7 +132,11 @@ export default function App() {
       "a country that didn't exist when you were five",
       'pandering to the thirsty',
       'cheese',
-      'the public vote is nothing like the jury vote'
+      'the public vote is nothing like the jury vote',
+      'one of the competing countries commits a war crime',
+      'keytar solo',
+      'the singer is carried a short distance',
+      "someone unironically claims Eurovision isn't political"
 
   ]
 

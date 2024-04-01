@@ -21,7 +21,7 @@ export default function CustomHeader() {
         style={{ position: 'absolute', width: '100%', height: '100%' }}
       />
      <View style={styles.headerContent}>
-     <TouchableOpacity style={styles.menuButton} onPress={handleMenuPress}>
+     <TouchableOpacity onPress={handleMenuPress}>
           <Ionicons name="menu" size={40} color="#fff" />
         </TouchableOpacity>
       <Text style={styles.headerText}>
@@ -30,11 +30,13 @@ export default function CustomHeader() {
       </View>  
         {showMenu && (
         <View style={styles.menu}>
+          <View style={styles.menuTextContainer}>
           <Link href="/">
             <Text style={styles.menuText}>
               • Home{"    "}{"\n"}
             </Text>
           </Link>
+          </View>
           <Link href="/play">
             <Text style={styles.menuText}>
               • Play{"    "}{"\n"}
@@ -84,10 +86,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     paddingLeft: '5%',
    },
-  menuButton: {
-  
-  },
-
   menu: { 
     flexDirection: 'column', 
     justifyContent: 'space-around',
@@ -101,6 +99,6 @@ const styles = StyleSheet.create({
     textShadowColor: 'black',
     textShadowRadius: 3, 
     marginLeft: 10,
-    backgroundColor: 'rgba(255, 240, 3, 0.2)'
+    backgroundColor: 'rgba(255, 240, 3, 0.1)',
    }
 })
