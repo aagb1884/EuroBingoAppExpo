@@ -9,7 +9,7 @@ export default function GetCards({ onPress}) {
               style={[styles.button, { backgroundColor: "yellow" }]}
               onPress={onPress}
             >
-              <Text style={[styles.buttonLabel, { color: "#25292e" }]}>Get Cards</Text>
+              <Text style={[styles.buttonLabel, { color: "#25292e" }]}>New Cards</Text>
             </Pressable>
           </View>
       );
