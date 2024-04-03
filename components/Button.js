@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     
   button: {
-    backgroundColor: "#FF1361",
+    backgroundColor: "#ff1361",
     borderRadius: 10,
     width: '100%',
     alignItems: 'center',
@@ -44,10 +44,12 @@ const styles = StyleSheet.create({
     
   },
    buttonLabel: {
-    color: '#25292e',
+    color: 'white',
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+    textShadowColor: 'black', 
+    textShadowRadius: 5,
   },
    active: {
    borderRadius: 10,
