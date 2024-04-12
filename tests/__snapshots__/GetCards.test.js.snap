@@ -82,7 +82,7 @@ exports[`<GetCards /> renders correctly 1`] = `
         ]
       }
     >
-      Get Cards
+      New Cards
     </Text>
   </View>
 </View>

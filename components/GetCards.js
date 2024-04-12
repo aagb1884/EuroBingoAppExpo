@@ -1,7 +1,7 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 
-export default function GetCards({ onPress}) {
+export default function GetCards({ onPress }) {
 
   return (
         <View style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18 }]}>

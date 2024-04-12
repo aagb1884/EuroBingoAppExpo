@@ -9,4 +9,21 @@ describe('<GetCards />', () => {
     expect(tree).toMatchSnapshot();
   });
   
+  it('should call handleGetNewCards when button is pressed', () => {
+
+    const onPressMock = jest.fn();
+
+    const component = renderer.create(
+      <GetCards 
+      id={"get-cards"}
+      onPress={onPressMock}
+      />
+    )
+
+    const getCardsButton = component.root.findByProps({id: 'get-cards'});
+  
+      getCardsButton.props.onPress();
+
+      expect(onPressMock).toHaveBeenCalled();
+  })
 });

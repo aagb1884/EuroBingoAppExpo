@@ -69,10 +69,12 @@ exports[`<Button /> renders correctly 1`] = `
       style={
         [
           {
-            "color": "#25292e",
+            "color": "white",
             "fontSize": 20,
             "fontWeight": "bold",
             "textAlign": "center",
+            "textShadowColor": "black",
+            "textShadowRadius": 5,
           },
         ]
       }
