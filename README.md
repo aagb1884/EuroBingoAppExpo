@@ -6,9 +6,13 @@ In 2023, the week before Eurovision, I built the [first version of this app](htt
 
 I then added an [updated version of the app](https://github.com/aagb1884/eurovision_bingo_testing), with [Continuous Integration testing](https://learn.cypress.io/advanced-cypress-concepts/running-cypress-in-ci) via Github Actions, and hosted it on my [portfolio site](https://andrewblair.co.uk/apps/eurovision-bingo).
 
-## Turning It Into an App
+## Deployment
 
-I have made apps before but not added any to app stores, and so I wanted to do this and add to my experience as a developer. From what I'd read of React Native is made sense to use an existing app and convert it, knowing some of the code would be reusable, and the most complete app I'd made with the widest commercial potential was my Eurovision Bingo app.
+You will need to have [Expo] installed, and for it to work you will also need [Node JS](https://nodejs.org/en/download), [Git](https://git-scm.com/) and (if you're on Mac or Linux) [Watchman](https://facebook.github.io/watchman/docs/install#buildinstall). Clone this repo. You can then install Expo Go on a mobile device and test the app that way.
+
+## Turning It Into a Mobile App
+
+I have made web apps before but not added any to app stores. I wanted to do this and add to my experience as a developer. From what I'd read of React Native it made sense to use one of my React JS apps as a starting point, knowing some of the code would be reusable, and the most complete app I'd made with the widest commercial potential was my Eurovision Bingo app.
 
 I learned the basics of React Native via the [Getting Started link](https://reactnative.dev/docs/environment-setup) on the homepage. It recommended I use Expo Go as I was new to mobile development, so I did.
 
