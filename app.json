@@ -20,15 +20,15 @@
       "bundleIdentifier": "io.eurobingo.client",
        "infoPlist": {
             "NSMicrophoneUsageDescription": "The app does not ask for or need to use your microphone to work.",
-            "NSPrivacyAccessedAPICategoryDiskSpace": "The app does not use any of the APIs listed in the Apple Developer documentation.",
-            "NSPrivacyAccessedAPICategoryFileTimestamp": "The app does not use any of the APIs listed in the Apple Developer documentation.",
-            "NSPrivacyAccessedAPICategorySystemBootTime": "The app does not use any of the APIs listed in the Apple Developer documentation.",
-            "NSPrivacyAccessedAPICategoryUserDefaults": "The app does not use any of the APIs listed in the Apple Developer documentation."
+            "NSPrivacyAccessedAPICategoryDiskSpace": "7D9E.1",
+            "NSPrivacyAccessedAPICategoryFileTimestamp": "0A2A.1",
+            "NSPrivacyAccessedAPICategorySystemBootTime": "3D61.1",
+            "NSPrivacyAccessedAPICategoryUserDefaults": "C56D.1"
         }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.aagb1884.eurovision_bingo"
