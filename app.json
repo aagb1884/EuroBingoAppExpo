@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.aagb1884.BigFinishGeneratorApp",
+      "bundleIdentifier": "io.eurobingo.client",
       "infoPlist": {
         "NSMicrophoneUsageDescription": "The app does not ask for or need to use your microphone to work.",
         "ITSAppUsesNonExemptEncryption": "False"
